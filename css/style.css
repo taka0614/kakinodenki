@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+/*================================
+	共通
+=================================*/
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+@font-face {
+  font-family: "OpenSans-CondBold";
+  src: url("font/OpenSans-CondBold.woff2") format("woff2"), url("font/OpenSans-CondBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans JP", "游ゴシック体", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.right {
+  text-align: right;
+}
+
+/*================================
+	header
+=================================*/
+
+/*================================
+	main
+=================================*/
+
+.price {
+  padding: 20px 30px;
+  background: rgb(250, 202, 34);
+  background: linear-gradient(178deg, rgba(250, 202, 34, 1) 0%, rgba(254, 144, 20, 1) 47%, rgba(248, 56, 0, 1) 100%);
+}
+
+.price p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.price p.small {
+  font-size: 45px;
+  letter-spacing: 1.5px;
+}
+
+.price p.big {
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 10px 15px 22px #c62828;
+}
+
+.price p.big .price_text {
+  font-size: 120px;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.price p.annotation {
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+.text {
+  background: #3e2102;
+  padding: 20px 30px;
+}
+
+.text .point {
+  max-width: 300px;
+}
+
+.text .no1 {
+  max-width: 500px;
+  display: block;
+  margin: 0px auto 30px;
+}
+
+.text p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 2;
+}
+
+.text p span.strong {
+  color: #e7cb12;
+  font-size: 45px;
+}
+
+.phone {
+  background: rgb(250, 208, 40);
+  background: linear-gradient(178deg, rgba(250, 208, 40, 1) 0%, rgba(255, 156, 68, 1) 47%, rgba(255, 92, 78, 1) 100%);
+  height: 324px;
+  position: relative;
+  padding: 30px 30px 20px;
+  position: relative;
+}
+
+.phone::before {
+  content: "でも相談に乗ります";
+  font-size: 44px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  opacity: 0.2;
+  color: #fff;
+  font-weight: bold;
+}
+
+.phone::after {
+  content: "お客様のご満足が何より";
+  font-size: 41px;
+  position: absolute;
+  bottom: 82px;
+  right: 305px;
+  opacity: 0.2;
+  color: #fff;
+  font-weight: bold;
+}
+
+.left p.tel a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+.left {
+  max-width: 500px;
+}
+
+.left p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.left p.tel {
+  font-size: 45px;
+  font-family: "OpenSans-CondBold";
+  position: relative;
+  padding-left: 80px;
+}
+
+.left p.tel::before {
+  content: "";
+  background: url(../img/phone.png) no-repeat;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  font-family: "OpenSans-CondBold";
+}
+
+.left p.free {
+  font-size: 35px;
+  margin: 30px 0;
+}
+
+.left p.title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 60px;
+}
+
+.right {
+  position: relative;
+}
+
+.right img {
+  max-width: 335px;
+  display: block;
+  position: absolute;
+  top: -353px;
+  right: 0;
+  z-index: 1;
+  left: auto;
+}
+
+/*================================
+	footer
+=================================*/
+
+footer {
+  padding: 10px 0;
+  background: #3e2102;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  margin-top: -15px;
+}
+
+/*================================
+	mobile
+=================================*/
+
+@media screen and (max-width: 910px) {
+  body {
+    font-size: 30px;
+  }
+  .price p.small {
+    font-size: 25px;
+  }
+  .price p.big {
+    font-size: 50px;
+  }
+  .price p.big .price_text {
+    font-size: 70px;
+  }
+  .text p {
+    font-size: 20px;
+  }
+  .text p span.strong {
+    font-size: 30px;
+  }
+
+  .left p.tel {
+    font-size: 45px;
+  }
+
+  .phone:before,
+  .phone:after {
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+  }
+  .right img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left p.title {
+    font-size: 40px;
+  }
+
+  .left p.free {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    font-size: 20px;
+  }
+
+  .price p.small {
+    font-size: 20px;
+  }
+  .price p.big {
+    font-size: 28px;
+  }
+  .price p.big .price_text {
+    font-size: 40px;
+  }
+  .text p {
+    font-size: 15px;
+  }
+  .text p span.strong {
+    font-size: 20px;
+  }
+
+  .phone {
+    height: auto;
+  }
+  footer {
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .price p.annotation {
+    font-size: 20px;
+  }
+
+  .left p.title {
+    font-size: 40px;
+  }
+
+  .left p.free {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+
+  .left p.tel::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .left p.tel a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .left p.tel a {
+    font-size: 23px;
+  }
+
+  .left p.tel:before {
+    width: 40px;
+    top: 20px;
+  }
+
+  .left p.tel {
+    padding-left: 50px;
+  }
+
+  .left p.free {
+    font-size: 20px;
+  }
+}
